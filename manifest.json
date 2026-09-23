@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "xDelete",
+  "version": "1.0.0",
+  "description": "Borra todos los posts y reposts de tu propia cuenta de X. Sobrevive a las recargas de página y respeta los límites del servidor.",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://abs.twimg.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "xDelete"
+  }
+}

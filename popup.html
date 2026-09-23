@@ -1,0 +1,40 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  body { width: 280px; margin: 0; padding: 14px; font: 13px/1.45 system-ui, sans-serif; }
+  h1 { font-size: 14px; margin: 0 0 10px; }
+  label { display: block; font-size: 12px; opacity: .75; margin-bottom: 4px; }
+  input { width: 100%; box-sizing: border-box; padding: 6px 8px; margin-bottom: 10px;
+          border: 1px solid rgba(128,128,128,.4); border-radius: 6px; background: transparent;
+          color: inherit; font: inherit; }
+  button { width: 100%; padding: 8px; border: 0; border-radius: 6px; font: inherit;
+           font-weight: 600; cursor: pointer; }
+  #arrancar { background: #1d9bf0; color: #fff; }
+  #parar { background: #d33; color: #fff; display: none; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12px; }
+  td { padding: 3px 0; }
+  td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  #aviso { margin-top: 10px; font-size: 11px; opacity: .7; }
+</style>
+
+<h1>Vaciar cuenta de X</h1>
+
+<label for="usuario">Tu usuario (sin @)</label>
+<input id="usuario" placeholder="tu_usuario" autocomplete="off">
+
+<button id="arrancar">Empezar a borrar</button>
+<button id="parar">Detener</button>
+
+<table>
+  <tr><td>Posts</td><td id="posts">0</td></tr>
+  <tr><td>Reposts</td><td id="reposts">0</td></tr>
+  <tr><td>Fallos</td><td id="fallos">0</td></tr>
+  <tr><td>Recargas</td><td id="recargas">0</td></tr>
+  <tr><td>Más viejo</td><td id="masViejo">—</td></tr>
+  <tr><td>Crédito</td><td id="credito">—</td></tr>
+</table>
+
+<div id="aviso"></div>
+
+<script src="popup.js"></script>
